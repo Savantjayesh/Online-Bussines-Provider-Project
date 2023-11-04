@@ -1,0 +1,317 @@
+{% extends 'base.html' %}
+{% block title %}Online Bussines Provider{% endblock title %}
+{% block body %}
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  <style>
+    *,*:before,*:after
+    {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    body{
+    background-color: #080710;
+    padding: 15px;
+}
+.background{
+    width: 430px;
+    height: 520px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+}
+.background .shape{
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    border-radius: 50%;
+}
+.shape:first-child{
+    background: linear-gradient(
+        #1845ad,
+        #23a2f6
+    );
+    left: -80px;
+    top: -80px;
+}
+.shape:last-child{
+    background: linear-gradient(
+        to right,
+        #ff512f,
+        #f09819
+    );
+    right: -30px;
+    bottom: -80px;
+}
+.form1{
+    height: 650px;
+    width: 600px;
+    background-color: rgba(255,255,255,0.13);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.07);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 45px 35px;
+    /* margin: 10rex; */
+    margin-left: 28%;
+}
+.form1 *{
+    font-family: 'Poppins',sans-serif;
+    letter-spacing: 0.5px;
+    outline: none;
+    border: none;
+}
+.form1 h3{
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 42px;
+    text-align: center;
+    padding: 5px;
+}
+
+.lab{
+    display: inline-block;
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 3px;
+    margin-right: 60px;
+    margin-left: 7px;
+}
+.lab1{
+    display: inline-block;
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 3px;
+    margin-right: 60px;
+    margin-left: 5px;
+}
+.inp{
+    display:inline-block;
+    margin: 5px;
+    height: 50px;
+    width: 30%;
+    background-color: rgba(255,255,255,0.07);
+    border-radius: 3px;
+    padding: 0 10px;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 300;
+    color: white;
+
+}
+::placeholder{
+    color: #e5e5e5;
+}
+.button1{
+    margin-top: 40px;
+    width: 100%;
+    background-color: #ffffff;
+    color: #080710;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.pass input{
+    display:inline;
+    margin-right: 20px;
+    height: 50px;
+    width: 45%;
+    background-color: rgba(255,255,255,0.07);
+    border-radius: 3px;
+    padding: 0 20px;
+    margin-top: 5px;
+    font-size: 14px;
+    font-weight: 300;
+    color: white;
+}
+.pass label{
+    padding: 3px;
+    margin-right: 30%;
+
+}
+.Contact input{
+    display:inline;
+    margin-right: 20px;
+    height: 50px;
+    width: 45%;
+    background-color: rgba(255,255,255,0.07);
+    border-radius: 3px;
+    padding: 0 20px;
+    margin-top: 5px;
+    font-size: 14px;
+    font-weight: 300;
+    color: white;
+
+}
+.Contact label{
+    padding: 3px;
+    margin-right: 28%;
+
+}
+footer{
+          width: 100%;
+          box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2); 
+          border-radius: 5px;
+          background: #111;
+          position: relative;
+          overflow: hidden;
+          color: #e5e5e5;
+        
+        }
+        .logo{
+            text-align: center;
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+        }
+        .desc{
+            text-align: center;
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+        .contact2{
+            padding-left: 50px;
+            padding-bottom: 30px;
+        }
+        .cont-logo{
+            padding-left: 50px;
+            padding-top: 0;
+        }
+        .a1 a{
+            text-decoration: none;
+            color: #e5e5e5;
+        }
+        .a2 a{
+            text-decoration: none;
+            color: #e5e5e5;
+        }
+        .a1{
+            padding-bottom: 10px;
+        }
+        .copyright{
+            text-align: right;
+            padding-right: 5rem;
+        }
+        
+  </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark  fixed-top" style="background-color: #111111 ;">
+        <a class="navbar-brand" href="/index">Online Bussines Provider</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    
+        <div class="collapse navbar-collapse mx-2" id="navbarsExampleDefault">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active mx-2">
+                    <a class="nav-link" href="/index">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <div class="dropdown my-2 mx-2">
+                         <a class="dropdown-toggle text-light" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                             Products
+                         </a>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" >
+                               <a class="dropdown-item" href="#">Papads</a>
+                               <a class="dropdown-item" href="#">Cakes</a>
+                               <a class="dropdown-item" href="#">PuranPoli</a>
+                             </div>
+                    </div>
+                    
+                </li>
+                <li class="nav-item active mx-2">
+                    <a class="nav-link" href="/about"> About <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active mx-2">
+                    <a class="nav-link" href="/admin">Admin Login <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active mx-2">
+                    <a class="nav-link" href="/login1">Buyer Login <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active mx-2">
+                    <a class="nav-link" href="/login1">Seller Login <span class="sr-only">(current)</span></a>
+                </li>
+                
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav> 
+    <br><br><br><br>
+  <div class="contener">
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+    <form class="form1" action="/signup" method="post">
+        {% csrf_token %}
+        <h3 style=" color: #ffffff;">Register Now</h3>
+     <div class="name">
+        <label for="username" class="lab" style=" color: #ffffff;" >First Name</label>
+        <label for="username" class="lab" style=" color: #ffffff;">Medal Name</label>
+        <label for="username" class="lab" style=" color: #ffffff;">Last Name</label>
+        <br>
+        <input type="text" class="inp" placeholder="Enter First Name" name="first_name" id="first_name">
+        <input type="text" class="inp" placeholder="Entrt Middle Name" name="middle_name" id="middle_name">
+        <input type="text" class="inp" placeholder="Enter Last Name" name="last_name" id="last_name">
+    </div>
+
+        <div class="Contact">
+        <label for="contact" class="lab" style=" color: #ffffff;">Contact No </label>
+        <label for="birth_date" class="Contact" style=" color: #ffffff;">Date Of Birth</label>
+        <input type="number"  placeholder="Contact No" name="contact" id="contact">
+        <input type="date" class="lab" name="dirth_date" id="dirth_date" style=" color: #ffffff;">
+
+        </div>
+        <div class="pass"><label for="number" class="lab1"  style=" color: #ffffff;">Username </label>
+            <label for="password" class="lab1" style=" color: #ffffff;">password</label>
+            <input type="text"  placeholder="Username" name="user_name" id="user_name">
+            <input type="password"  placeholder="password" id="password" name="password" class="lab" style=" color: #ffffff;">
+    
+            </div>
+
+        <button class="button1" type="submit">Submit</button>
+        
+    </div>    
+    </form>
+</body><br><br><br>
+<footer class="footer1">
+    <h1 class="logo">Online Bussines Provider</h1> 
+    <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ducimus vero
+         ab obcaecati porro mollitia accusamus aliquid odit expedita quos, omnis temporibus
+          enim dolorem nemo ipsa laboriosam id assumenda doloremque ipsam. Architecto, id 
+          dicta pariatur maxime harum dolore magni voluptas, nostrum libero illo similique, 
+          qui itaque odit? Provident, obcaecati? Atque?</p>
+    <h4 class="cont-logo">Contact Us :</h4>
+<div class="contact2">  
+    <div class="a1"> 
+    Contact No : <a href="#">7030749166</a><br>  
+    </div>
+    <div  class="a2">
+    Gmail Id : <a href="#">jayeshsawant318@gmail.com</a>
+    </div>
+    <h5 class="copyright">Developer : &copy; Jayesh Savant</h5>
+</div>
+</footer>
+</html>
+
+
+
+{% endblock body %}
